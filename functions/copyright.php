@@ -7,7 +7,7 @@ if ( ! function_exists( 'comicpress_copyright_text' ) ) {
 		$output  = "<p class=\"copyright-info\">\r\n";
 		$output .= comicpress_copyright_info();
 		$output .= "<span class=\"footer-pipe\">|</span> ";
-		$output .= __( 'Powered by', 'comicpress' ) . " <a href=\"http://wordpress.org/\">WordPress</a> " . __( 'with', 'comicpress' ) . " <a href=\"http://frumph.net\">ComicPress</a>\r\n";
+		$output .= __( 'Powered by', 'comicpress' ) . " <a href=\"https://wordpress.org/\">WordPress</a> " . __( 'with', 'comicpress' ) . " <a href=\"https://wordpress.org/themes/comicpress/\">ComicPress</a>\r\n";
 		$output .= comicpress_hosted_on();
 		$output .= "<span class=\"footer-subscribe\">";
 		$output .= "<span class=\"footer-pipe\">|</span> ";
@@ -36,7 +36,7 @@ if ( ! function_exists( 'comicpress_hosted_on' ) ) {
 				$site_name = $current_site->site_name;
 			}
 			$output  = "<span class=\"copyright-pipe\">|</span> ";
-			$output .= __( 'Hosted on', 'comicpress' ) . ' <a href="http://' . $current_site->domain . $current_site->path . '">' . $site_name . '</a> ';
+			$output .= __( 'Hosted on', 'comicpress' ) . ' <a href="https://' . $current_site->domain . $current_site->path . '">' . $site_name . '</a> ';
 			return apply_filters( 'comicpress_hosted_on', $output );
 		}
 	}
@@ -71,9 +71,9 @@ if ( ! function_exists( 'comicpress_copyright_dates' ) ) {
 					");
 		$output          = '';
 		if ( $copyright_dates ) {
-			$copyright = $copyright_dates[0]->firstdate;
+			$copyright = '2022';
 			if ( $copyright_dates[0]->firstdate != $copyright_dates[0]->lastdate ) {
-				$copyright .= '-' . $copyright_dates[0]->lastdate;
+				$copyright .= '&ndash;' . '2023 <span class="footer-pipe">|</span> Content icensed under <a href="/license/">CC&nbsp;BY-SA&nbsp;4.0</a>';
 			}
 			$output = $copyright;
 		}
